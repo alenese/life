@@ -1,612 +1,160 @@
 
-/* =================================
-   SWISS STYLE PORTFOLIO
-================================= */
-
-:root {
-    --bg: #f4f3ef;
-    --black: #171717;
-    --red: #e6332a;
-    --gray: #777773;
-    --line: #c9c8c2;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    background: var(--bg);
-    color: var(--black);
-    font-family: 'Inter', Arial, sans-serif;
-    line-height: 1.5;
-}
-
-img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* NAVIGATION */
-
-.navbar {
-    min-height: 80px;
-    padding: 20px 6%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-    border-bottom: 1px solid var(--black);
-}
-
-.logo {
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: -1px;
-}
-
-.logo span {
-    color: var(--red);
-}
-
-.navbar nav {
-    display: flex;
-    gap: 27px;
-}
-
-.navbar nav a,
-.nav-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.navbar nav a:hover,
-.contact-links a:hover {
-    color: var(--red);
-}
-
-.nav-label {
-    color: var(--gray);
-}
-
-
-/* HERO */
-
-.hero {
-    padding: 35px 6% 0;
-}
-
-.hero-top,
-.hero-bottom {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--black);
-}
-
-.hero-main {
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 8%;
-    align-items: center;
-    padding: 85px 0;
-}
-
-.section-number {
-    color: var(--red);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-size: clamp(60px, 9vw, 130px);
-    font-weight: 900;
-    letter-spacing: -8px;
-    line-height: 0.88;
-}
-
-.hero h1 span,
-.about h2 span,
-.marketing h2 span,
-.creative-title span,
-.contact h2 span {
-    color: var(--red);
-}
-
-.intro {
-    max-width: 440px;
-    margin-top: 35px;
-    font-size: 15px;
-    line-height: 1.9;
-    color: var(--gray);
-}
-
-.red-button {
-    display: inline-block;
-    background: var(--red);
-    color: white;
-    padding: 16px 24px;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    transition: 0.3s;
-}
-
-.red-button:hover {
-    background: var(--black);
-    transform: translateY(-3px);
-}
-
-.hero-image img {
-    height: 440px;
-    filter: grayscale(100%);
-}
-
-.hero-image p {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding-top: 12px;
-}
-
-.hero-bottom {
-    border-top: 1px solid var(--black);
-    border-bottom: none;
-}
-
-
-/* SECTION GENERAL */
-
-.section {
-    padding: 100px 6%;
-}
-
-.section-heading {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--black);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-}
-
-.section-heading span:first-child {
-    color: var(--red);
-}
-
-
-/* ABOUT */
-
-.about {
-    border-top: 1px solid var(--line);
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10%;
-    padding-top: 65px;
-}
-
-.about h2 {
-    font-size: clamp(45px, 6vw, 85px);
-    font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: -5px;
-}
-
-.about-content {
-    padding-top: 5px;
-}
-
-.about-content p {
-    font-size: 15px;
-    color: var(--gray);
-    margin-bottom: 22px;
-    line-height: 1.9;
-}
-
-
-/* MARKETING */
-
-.marketing {
-    background: #e9e8e3;
-}
-
-.marketing-intro {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    align-items: end;
-    gap: 10%;
-    padding: 65px 0;
-}
-
-.marketing h2 {
-    font-size: clamp(50px, 7vw, 95px);
-    font-weight: 900;
-    letter-spacing: -5px;
-    line-height: 0.95;
-}
-
-.marketing-intro > p {
-    color: var(--gray);
-    max-width: 350px;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.experience {
-    display: grid;
-    grid-template-columns: 55px 1fr 0.65fr;
-    gap: 30px;
-    padding: 45px 0;
-    border-top: 1px solid var(--line);
-    align-items: start;
-}
-
-.exp-number {
-    color: var(--red);
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.exp-date {
-    font-size: 10px;
-    color: var(--gray);
-    font-weight: 700;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-}
-
-.exp-details h3 {
-    font-size: 24px;
-    font-weight: 900;
-    letter-spacing: -1px;
-    line-height: 1.2;
-}
-
-.exp-details h4 {
-    color: var(--red);
-    font-size: 12px;
-    margin: 8px 0 15px;
-}
-
-.exp-description,
-.exp-details li {
-    font-size: 13px;
-    color: var(--gray);
-    line-height: 1.8;
-}
-
-.exp-details ul {
-    padding-left: 18px;
-    margin: 15px 0;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 20px;
-}
-
-.tags span {
-    border: 1px solid var(--black);
-    padding: 5px 9px;
-    font-size: 9px;
-    font-weight: 700;
-}
-
-.exp-image img {
-    height: 220px;
-    filter: grayscale(100%);
-}
-
-.exp-image img:hover {
-    filter: grayscale(0%);
-}
-
-
-/* CREATIVE WORKS */
-
-.creative-title {
-    font-size: clamp(65px, 10vw, 130px);
-    line-height: 0.85;
-    font-weight: 900;
-    letter-spacing: -8px;
-    margin-top: 65px;
-}
-
-.creative-description {
-    color: var(--gray);
-    max-width: 420px;
-    font-size: 14px;
-    margin-top: 30px;
-    line-height: 1.8;
-}
-
-.portfolio-category {
-    margin-top: 100px;
-}
-
-.category-title {
-    border-top: 1px solid var(--black);
-    padding-top: 20px;
-    margin-bottom: 30px;
-}
-
-.category-title span {
-    font-size: 10px;
-    font-weight: 800;
-    color: var(--red);
-    letter-spacing: 1px;
-}
-
-.category-title h3 {
-    font-size: clamp(32px, 5vw, 55px);
-    font-weight: 900;
-    letter-spacing: -2px;
-    margin: 10px 0;
-}
-
-.category-title p {
-    font-size: 12px;
-    color: var(--gray);
-}
-
-.work-grid {
-    display: grid;
-    gap: 20px;
-}
-
-.design-grid,
-.photo-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.video-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* =========================================
+   SWISS PORTFOLIO — IMAGE LAYOUT CORRECTION
+========================================= */
+
+/* Prevent images from expanding their containers */
+
+.work-grid,
+.work-item,
+.hero-image,
+.exp-image {
+    min-width: 0;
+    max-width: 100%;
 }
 
 .work-item {
-    position: relative;
-    min-width: 0;
+    overflow: hidden;
 }
+
+/* Make every gallery image follow its grid */
 
 .work-item img {
-    height: 310px;
-    background: #deddd7;
-    transition: 0.3s;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
 }
 
-.work-item:hover img {
-    filter: brightness(0.88);
+/* GRAPHIC DESIGN — 3 equal columns */
+
+.design-grid,
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
 }
 
-.work-caption {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    border-top: 1px solid var(--black);
-    margin-top: 12px;
-    padding-top: 10px;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+.design-grid .work-item img {
+    aspect-ratio: 4 / 3;
+    height: auto;
 }
 
-.work-caption span:last-child {
-    color: var(--red);
-    white-space: nowrap;
+/* VIDEO EDITING — 2 equal landscape columns */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
 }
 
 .video-grid .work-item img {
-    height: 350px;
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
 
-.video-label {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: var(--red);
-    color: white;
-    padding: 8px 12px;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1px;
+/* PHOTOGRAPHY — uniform image proportions */
+
+.photo-grid .work-item img {
+    aspect-ratio: 4 / 3;
+    height: auto;
 }
 
+/* Captions stay aligned */
 
-/* CONTACT */
-
-.contact {
-    background: var(--black);
-    color: var(--bg);
-    text-align: center;
-}
-
-.contact .section-heading {
-    border-color: #555;
-}
-
-.contact h2 {
-    font-size: clamp(55px, 9vw, 110px);
-    line-height: 0.95;
-    letter-spacing: -6px;
-    font-weight: 900;
-    margin-top: 90px;
-}
-
-.contact p {
-    color: #aaa;
-    font-size: 14px;
-    margin-top: 25px;
-}
-
-.contact-links {
+.work-caption {
+    min-height: 35px;
     display: flex;
-    justify-content: center;
-    gap: 35px;
-    flex-wrap: wrap;
-    margin-top: 85px;
-}
-
-.contact-links a {
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-
-/* FOOTER */
-
-footer {
-    background: var(--black);
-    color: #aaa;
-    border-top: 1px solid #444;
-    padding: 25px 6%;
-    display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    gap: 10px;
 }
 
+/* Marketing experience images */
 
-/* RESPONSIVE DESIGN */
+.exp-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.exp-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Hero image */
+
+.hero-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Prevent oversized media */
+
+.work-item video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Keep image proportions on tablets */
 
 @media (max-width: 850px) {
 
-    .navbar {
-        flex-wrap: wrap;
+    .design-grid,
+    .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .navbar nav {
-        order: 3;
-        width: 100%;
-        flex-wrap: wrap;
+    .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .nav-label {
-        margin-left: auto;
-    }
-
-    .hero-main {
-        gap: 35px;
-    }
-
-    .hero h1 {
-        letter-spacing: -5px;
-    }
-
-    .experience {
-        grid-template-columns: 35px 1fr;
-    }
-
-    .exp-image {
-        grid-column: 2;
-    }
-
-    .exp-image img {
-        height: 250px;
-    }
-
-    .about-grid,
-    .marketing-intro {
-        gap: 35px;
-    }
 }
 
+/* Mobile layout */
 
 @media (max-width: 600px) {
-
-    .section {
-        padding: 70px 6%;
-    }
-
-    .hero-main,
-    .about-grid,
-    .marketing-intro {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-main {
-        padding: 55px 0;
-    }
-
-    .hero h1 {
-        font-size: 65px;
-    }
-
-    .hero-image img {
-        height: 350px;
-    }
-
-    .hero-bottom {
-        justify-content: flex-start;
-    }
-
-    .about h2,
-    .marketing h2 {
-        letter-spacing: -3px;
-    }
-
-    .creative-title {
-        letter-spacing: -4px;
-    }
 
     .design-grid,
     .photo-grid,
     .video-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
     }
 
-    .work-item img,
+    .work-item img {
+        aspect-ratio: 4 / 3;
+    }
+
     .video-grid .work-item img {
-        height: 300px;
+        aspect-ratio: 16 / 9;
     }
 
-    .experience {
-        grid-template-columns: 30px 1fr;
-        gap: 15px;
+    .exp-image img {
+        aspect-ratio: 16 / 9;
     }
 
-    .exp-details h3 {
-        font-size: 21px;
+    .hero-image img {
+        aspect-ratio: 4 / 5;
     }
 
-    .contact h2 {
-        letter-spacing: -3px;
-    }
-
-    .contact-links {
-        gap: 20px;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
 }
